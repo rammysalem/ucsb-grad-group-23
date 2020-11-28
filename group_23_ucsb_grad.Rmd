@@ -20,9 +20,9 @@ ucsb_grad  <- read_csv(here("data","ucsb_grad_data.csv"))
 #Make ggplot2 graph
 ggplot(data = ucsb_grad, aes(x = year_abbr, y = domestic_enrollment)) + # select x- and y-axis variables
   geom_col(aes(fill = ethnicity), position = "fill") + # create stacked bar graph
-  scale_y_continuous(labels = scales::percent) +
+  scale_y_continuous(labels = scales::percent) + # changed decimals to percentages
   labs(x = "Academic Year",
        y = "Domestic Enrollment Percentages by Ethnicity", title = "Domestic Enrollment at UCSB by Ethnicity for Years 2008-2019")+ #add labels for x and y axis, and title
-  theme_minimal()
+  theme_minimal() # changed theme
 ```
 
