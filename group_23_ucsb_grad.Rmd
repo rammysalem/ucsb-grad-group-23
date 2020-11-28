@@ -22,6 +22,7 @@ ggplot(data = ucsb_grad, aes(x = year_abbr, y = domestic_enrollment)) + # select
   geom_col(aes(fill = ethnicity), position = "fill") + # create stacked bar graph
   scale_y_continuous(labels = scales::percent) +
   labs(x = "Academic Year",
-       y = "Domestic Enrollment Percentages by Ethnicity")
+       y = "Domestic Enrollment Percentages by Ethnicity", title = "Domestic Enrollment at UCSB by Ethnicity for Years 2008-2019")+ #add labels for x and y axis, and title
+  theme_minimal()
 ```
 
